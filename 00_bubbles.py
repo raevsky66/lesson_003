@@ -41,9 +41,10 @@ def circle(point, step, radius = 50, one_circle = False):
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
 radius = 20
 for _ in range(0,100):
-    x = rd.randint(40,1500)
-    y = rd.randint(40,1500)
-    center_position = sd.get_point(x, y)
+    # x = rd.randint(40,1500)
+    # y = rd.randint(40,1500)
+    # center_position = get_point(x, y)
+    center_position = sd.random_point()
     circle(center_position, 15, radius, one_circle=True)
 
 sd.pause()
