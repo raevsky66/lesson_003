@@ -14,13 +14,18 @@ paper_x, paper_y = 8, 9
 # проверить для
 # paper_x, paper_y = 9, 8
 # paper_x, paper_y = 6, 8
-# paper_x, paper_y = 8, 6
+paper_x, paper_y = 7, 11
 # paper_x, paper_y = 3, 4
 # paper_x, paper_y = 11, 9
 # paper_x, paper_y = 9, 11
 # (просто раскоментировать нужную строку и проверить свой код)
 
-# TODO здесь ваш код
+if envelop_x >= paper_x and envelop_y >= paper_y:
+    print("ДА")
+elif envelop_x >= paper_y and envelop_y >= paper_x:
+    print("ДА")
+else:
+    print("НЕТ")
 
 # Усложненное задание, решать по желанию.
 # Заданы размеры hole_x, hole_y прямоугольного отверстия и размеры brick_х, brick_у, brick_z кирпича (все размеры
