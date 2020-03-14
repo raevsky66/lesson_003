@@ -45,11 +45,18 @@ store = {
 #         подсчет количества товара
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
-
-# TODO здесь ваш код
-
-
-
-
-
-
+goods_count_all = 0
+goods_cost_all = 0
+for good in goods:
+    good_code = goods[good]
+    good_count = 0
+    good_cost = 0
+    for good_in_store in store:
+        if good_in_store == good_code:
+             for dep in store[good_in_store]:
+                 good_count += dep['quantity']
+                 good_cost += good_count*dep['price']
+    print(good, good_count,'шт', good_cost, 'руб')
+    goods_count_all += good_count
+    goods_cost_all += good_cost
+print('Итого', goods_count_all,'шт', goods_cost_all, 'руб')
